@@ -81,8 +81,8 @@ class Unet(nn.Module):
 
 
 if __name__ == '__main__':
-    in_img = torch.randn(1,3,640,640)
-    model = Unet(3,5)
+    in_img = torch.randn(1000,10,32,32)
+    model = Unet(10,9)
     prediction = model(in_img)
 
     print(prediction.size())
